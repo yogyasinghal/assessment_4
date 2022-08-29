@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { log } from 'joi-browser';
+
 import { useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom'
 axios.defaults.withCredentials=true 
-function DashBoardCookies(){
+function DashBoard(){
     const navigate=useNavigate()
     const [users,setUsers]=useState({});
     const [name,setName] = useState('');
@@ -159,4 +159,4 @@ function DashBoardCookies(){
 
     )
 }
-export default DashBoardCookies
+export default DashBoard;

@@ -1,11 +1,11 @@
 // admin and admin username and pass
 // events -> onblur etc
 import { useEffect, useState } from "react";
-import {BrowserRouter,Route,Routes,Link} from 'react-router-dom';
+// import {BrowserRouter,Route,Routes,Link} from 'react-router-dom';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import Cookies from 'universal-cookie'
-import { log } from "joi-browser";
+
 function Login(){
 
     const navigate=useNavigate()
