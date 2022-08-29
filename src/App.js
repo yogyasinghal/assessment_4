@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginCookies from './cookies and jwt/LoginCookies'
+import {BrowserRouter,Route,Routes,Link} from 'react-router-dom'
+import DashboardCookies from './cookies and jwt/DashboardCookies'
+import LoginComponent from './cookies and jwt/LoginComponent'
+import NavBar from './Navbar';
+import Login from './validations/Login';
+import Signup from './validations/Signup';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App()
+{
+    return(
+       <div>
+        <BrowserRouter>
+        <NavBar></NavBar>
+        <Routes>
+            {/* <Route path = '/' element = {<LoginCookies></LoginCookies>}></Route> */}
+            <Route path = '/login' element = {<Login></Login>}></Route>
+            <Route path = '/Signup' element = {<Signup></Signup>}></Route>
+            {/* <Route path='/' element={<LoginComponent></LoginComponent>}></Route> */}
+            <Route path='/dashboard' element={<DashboardCookies></DashboardCookies>}></Route>
+        </Routes>
+        </BrowserRouter>
+       </div>
+    )
 }
-
-export default App;
+export default App
