@@ -1,0 +1,7 @@
+const express=require('express')
+const app=express()
+const bp=require('body-parser')
+app.use(bp.json())
+const createContact=require('./controllers/CreateUser')
+app.use('/',createContact)
+app.listen(3001,()=>console.log('server started'))
