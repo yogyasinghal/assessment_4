@@ -27,10 +27,11 @@ function Login(){
         {email:email,password:pass})
         .then(
             (res)=>{
-        cookies.set('accesstoken',res.data.accesstoken,{sameSite:'strict',path:'/',maxAge:30})
+        // cookies.set('accesstoken',res.data.accesstoken,{sameSite:'strict',path:'/',maxAge:30})
         setStatus(res.data.status)
         localStorage.setItem('role',res.data.role)
         localStorage.setItem('login',true)
+        console.log("role",res.data.role);
         })
         .catch((e)=>{
             console.log(e)

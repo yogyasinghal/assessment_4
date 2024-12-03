@@ -10,7 +10,7 @@ const NavBar=()=>{
     const Logout = () =>{
         localStorage.removeItem('accesstoken')
         localStorage.setItem('login',false)
-        cookies.set('accesstoken','',{sameSite:'strict',path:'/',maxAge:30})
+        // cookies.set('accesstoken','',{sameSite:'strict',path:'/',maxAge:30})
         navigate('/')
     }
     return(
